@@ -25,3 +25,5 @@ angular.module('trello-clone').controller 'BoardShowCtrl', ($scope, $stateParams
      resolve:
        task: ->
          _.clone task
+       lanes: ->
+         _.clone $scope.lanes

@@ -5,14 +5,19 @@
    <div class="modal-body">
      <div class="form-group">
        <div class="form-control-wrapper">
-         <input type="text" class="form-control empty" name="task" ng-model="task.task" required>
+         <input type="text" class="form-control" name="task" ng-model="task.task" required>
          <div class="floating-label">task</div>
          <span class="material-input"></span>
        </div>
      </div>
+     <div class="form-group">
+       <select class="form-control" name="lane" ng-model="lane">
+         <option value="{{lane._id}}" ng-repeat="lane in lanes">{{lane.name}}</option>
+       </select>
+     </div>
    </div>
    <div class="modal-footer">
        <button class="btn btn-primary" type="submit">save</button>
-       <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+       <button class="btn btn-warning" type="button" ng-click="close()">Cancel</button>
    </div>
 </form>
