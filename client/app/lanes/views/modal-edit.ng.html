@@ -1,0 +1,19 @@
+<form ng-submit="save()">
+  <div class="modal-header">
+       <h3 class="modal-title">Edit lane</h3>
+   </div>
+   <div class="modal-body">
+     <div class="form-group">
+       <div class="form-control-wrapper">
+         <input type="text" class="form-control" name="lane" ng-model="lane.name" required>
+         <div class="floating-label">name</div>
+         <span class="material-input"></span>
+       </div>
+     </div>
+   </div>
+   <div class="modal-footer">
+       <button class="btn btn-primary" type="submit">save</button>
+       <button class="btn btn-warning" type="button" ng-click="close()">Cancel</button>
+       <button class="btn btn-danger" type="button" ng-click="delete()">Delete</button>
+   </div>
+</form>

@@ -27,3 +27,11 @@ angular.module('trello-clone').controller 'BoardShowCtrl', ($scope, $stateParams
          _.clone task
        lanes: ->
          _.clone $scope.lanes
+
+  $scope.openLaneModal = (lane) =>
+    $modal.open
+      templateUrl: 'client/app/lanes/views/modal-edit.ng.html'
+      controller: 'LaneEditCtrl'
+      resolve:
+        lane: ->
+          _.clone lane

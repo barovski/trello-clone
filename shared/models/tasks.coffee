@@ -3,7 +3,5 @@
 @Tasks.helpers
  isOwner: (user) ->
    user = user or username: ''
-   lane = Lanes.findOne(this.lane) or {}
-   board = Boards.findOne(lane.board) or {}
-   board.owner == user.username
-   
+   lane = Lanes.findOne(this.lane) or isOwner: -> no
+   lane.isOwner(user)
