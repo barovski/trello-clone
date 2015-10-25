@@ -5,5 +5,6 @@ app.config ($urlRouterProvider, $stateProvider, $locationProvider) ->
   $stateProvider.state 'boards',
     url: '/'
     templateUrl: 'client/app/boards/views/list.ng.html'
+    controller: 'BoardListCtrl'
 
   $urlRouterProvider.otherwise('/');
