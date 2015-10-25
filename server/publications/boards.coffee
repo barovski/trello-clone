@@ -11,4 +11,8 @@ Meteor.publishComposite 'board', (id) ->
   children: [
     find: (board) ->
       Lanes.find(board: board._id)
+    children: [
+      find: (lane) ->
+        Tasks.find(lane: lane._id)
+    ]
   ]

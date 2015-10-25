@@ -19,3 +19,9 @@
     defaultValue: 'lane'
   board:
     type: String
+
+@Schema.Tasks = new SimpleSchema
+  task:
+    type: String
+  lane:
+    type: String
