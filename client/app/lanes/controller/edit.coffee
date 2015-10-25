@@ -6,3 +6,6 @@ angular.module('trello-clone').controller 'LaneEditCtrl', ($scope, $meteor, $mod
 
   $scope.close = =>
     $modalInstance.close()
+
+  $scope.delete = =>
+    $meteor.call('removeLane', lane._id).then $scope.close
