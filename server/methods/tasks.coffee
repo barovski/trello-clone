@@ -2,7 +2,9 @@ Meteor.methods
   insertTask: (doc) ->
     Schema.Tasks.clean(doc)
     check(doc, Schema.Tasks)
-    Tasks.insert(doc)
+    lane = Lanes.findOne(doc.lane) or isOwner: -> no
+    if lane.isOwner(Meteor.user())
+      Tasks.insert(doc)
   updateTask: (doc) =>
     task = Tasks.findOne(doc._id) or isOwner: -> no
     if task.isOwner(Meteor.user())
