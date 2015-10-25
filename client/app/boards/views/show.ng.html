@@ -14,7 +14,12 @@
         {{lane.name}}
       </div>
       <div class="panel-body">
-        <button class="btn btn-primary btn-block" ng-click="addTask()">Add Task</button>
+        <ul>
+          <li ng-repeat="task in tasks">
+            {{task.task}}
+          </li>
+        </ul>
+        <button class="btn btn-primary btn-block" ng-click="addTask(lane._id)">Add Task</button>
       </div>
     </div>
 
