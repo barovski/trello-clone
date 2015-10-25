@@ -4,3 +4,7 @@ Meteor.publish 'my-boards', ->
 
   Boards.find
    owner: user.username
+
+Meteor.publishComposite 'board', (id) ->
+  find: ->
+    Boards.find(id)
