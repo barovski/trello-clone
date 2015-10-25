@@ -11,3 +11,11 @@
   members:
     type: [String]
     defaultValue: []
+
+@Schema.Lanes = new SimpleSchema
+  name:
+    type: String
+    max: 25
+    defaultValue: 'lane'
+  board:
+    type: String
