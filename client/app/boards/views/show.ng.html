@@ -14,11 +14,19 @@
         {{lane.name}}
       </div>
       <div class="panel-body">
-        <ul>
-          <li ng-repeat="task in tasks">
-            {{task.task}}
+        <ul class="list-unstyled">
+          <li ng-repeat="task in tasks | filter:{'lane': lane._id}">
+            <div class="task">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  {{task.task}}
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
+      </div>
+      <div class="panel-footer">
         <button class="btn btn-primary btn-block" ng-click="addTask(lane._id)">Add Task</button>
       </div>
     </div>
@@ -28,6 +36,8 @@
         lane
       </div>
       <div class="panel-body">
+      </div>
+      <div class="panel-footer">
         <button class="btn btn-primary btn-block" ng-click="addLane()">Add lane</button>
       </div>
     </div>
