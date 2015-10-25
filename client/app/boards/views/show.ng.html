@@ -16,10 +16,11 @@
       <div class="panel-body">
         <ul class="list-unstyled">
           <li ng-repeat="task in tasks | filter:{'lane': lane._id}">
-            <div class="task">
+            <div class="task" ng-click="openTaskModal(task)">
               <div class="panel panel-default">
                 <div class="panel-body">
                   {{task.task}}
+                  <span class="pull-right"><i class="fa fa-edit"></i></span>
                 </div>
               </div>
             </div>

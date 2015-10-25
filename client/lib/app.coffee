@@ -1,4 +1,4 @@
-app = angular.module 'trello-clone', ['angular-meteor', 'ui.router']
+app = angular.module 'trello-clone', ['angular-meteor', 'ui.router', 'ui.bootstrap']
 
 app.config ($urlRouterProvider, $stateProvider, $locationProvider) ->
   $locationProvider.html5Mode(true);
