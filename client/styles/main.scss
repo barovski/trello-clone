@@ -25,6 +25,10 @@ $screen-sm-min: 768px;
   margin-right: 20px;
 }
 
+.lane > .panel-heading {
+  cursor: pointer;
+}
+
 .lane > .panel-body {
   height: 285px;
   overflow: scroll;
