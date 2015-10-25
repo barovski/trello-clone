@@ -9,6 +9,10 @@ angular.module('trello-clone').controller 'TaskEditCtrl', ($scope, $meteor, $mod
       lane: $scope.lane
     $meteor.call('updateTask', task).then ->
       $scope.close()
-      
+
   $scope.close = =>
     $modalInstance.close()
+
+  $scope.delete = =>
+    $meteor.call('removeTask', task._id).then ->
+      $scope.close()

@@ -33,3 +33,4 @@ twbs:bootstrap
 reywood:publish-composite
 fortawesome:fontawesome
 angularui:angular-ui-bootstrap
+dburles:collection-helpers

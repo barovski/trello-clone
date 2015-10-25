@@ -3,12 +3,13 @@ Meteor.methods
     Schema.Tasks.clean(doc)
     check(doc, Schema.Tasks)
     Tasks.insert(doc)
-  updateTask: (doc) ->
-    check(Meteor.user(), Object)
-    task = Tasks.findOne(doc._id) or {}
-    lane = Lanes.findOne(task.lane) or {}
-    board = Boards.findOne(lane.board) or {}
-    if board.owner == Meteor.user().username
+  updateTask: (doc) =>
+    task = Tasks.findOne(doc._id) or isOwner: -> no
+    if task.isOwner(Meteor.user())
       Schema.Tasks.clean(doc)
       check(doc, Schema.Tasks)
       Tasks.update task._id, $set: doc
+  removeTask: (id) =>
+    task = Tasks.findOne(id) or isOwner: -> no
+    if task.isOwner(Meteor.user())
+      Tasks.remove(id)
