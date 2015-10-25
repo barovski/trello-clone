@@ -13,10 +13,20 @@
   <ng-include src="'client/app/boards/views/create.ng.html'"></ng-include>
 
   <div class="row">
-    <div ng-repeat="board in boards" class="col-sm-3">
-      <div class="panel panel-primary panel-board" ng-click="showBoard(board._id)">
+    <div ng-repeat="board in boards" class="col-sm-3 board-item">
+      <div class="panel panel-primary panel-board">
         <div class="panel-body">
-          {{board.name}}
+          <div class="row">
+            <div class="col-md-12">
+              {{board.name}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <button class="btn btn-primary pull-left" ng-click="showBoard(board._id)"><i class="fa fa-eye"></i></button>
+              <button class="btn btn-danger pull-right"><i class="fa fa-trash-o"></i></button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
