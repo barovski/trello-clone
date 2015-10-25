@@ -23,7 +23,7 @@
           <li class="active"><a ui-sref="boardsList">Dashboard <span class="sr-only">(current)</span></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" data-blaze-template name="_loginButtons"></ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right" ng-show="$root.currentUser">
           <li><a ui-sref="boardsCreate">Add board</a></li>
         </ul>
       </div>
