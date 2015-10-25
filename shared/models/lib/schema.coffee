@@ -5,7 +5,7 @@
     max: 25
   isPublic:
     type: Boolean
-    defaultValue: yes
+    defaultValue: no
   owner:
     type: String
   members:
