@@ -6,3 +6,6 @@ angular.module('trello-clone').controller 'BoardListCtrl', ($meteor, $scope, $st
   $scope.showBoard = (id) =>
     $state.go 'boardsShow',
      id: id
+
+  $scope.delete = (board) =>
+    $meteor.call 'removeBoard', board._id
