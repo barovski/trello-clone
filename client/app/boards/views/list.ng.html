@@ -1,4 +1,15 @@
-<div class="container">
+<div ng-hide="$root.currentUser">
+  <div class="jumbotron jumbotron-material-teal-300" id="hero">
+    <div class="container">
+      <h1>'Allo 'Allo</h1>
+      <img class="img-responsive" src="/images/logo.png" alt="">
+      <p>Keep track of your tasks!</p>
+      <p>Create an account to get started</p>
+    </div>
+  </div>
+</div>
+
+<div class="container" ng-show="$root.currentUser">
   <div class="row">
     <div ng-repeat="board in boards" class="col-sm-3">
       <div class="panel panel-primary panel-board" ng-click="showBoard(board._id)">
