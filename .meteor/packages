@@ -20,7 +20,6 @@ angular
 check
 ejson
 coffeescript
-twbs:bootstrap
 fezvrasta:bootstrap-material-design-fullpalette
 ian:accounts-ui-bootstrap-3
 urigo:angular-blaze-template
@@ -29,3 +28,5 @@ angularui:angular-ui-router
 aldeed:simple-schema
 aldeed:collection2
 msavin:mongol
+fourseven:scss
+twbs:bootstrap
