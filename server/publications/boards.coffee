@@ -8,3 +8,7 @@ Meteor.publish 'my-boards', ->
 Meteor.publishComposite 'board', (id) ->
   find: ->
     Boards.find(id)
+  children: [
+    find: (board) ->
+      Lanes.find(board: board._id)
+  ]

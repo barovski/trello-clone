@@ -7,3 +7,20 @@ $screen-sm-min: 768px;
     width: $screen-md-min;
   }
 }
+
+.wrapper {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.lanes {
+  width: 10000px;
+  height: 100%;
+}
+
+.lane {
+  height: 100%;
+  display: inline-block;
+  width: 300px;
+  margin-right: 20px;
+}
