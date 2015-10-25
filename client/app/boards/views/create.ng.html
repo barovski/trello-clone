@@ -1,12 +1,13 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-primary">
-        <div class="panel-body">
-          <form ng-submit="submit()">
+<div class="row" ng-controller="BoardCreateCtrl">
+  <div class="col-md-12">
+    <div class="panel panel-primary">
+      <div class="panel-body">
+        <form ng-submit="submit()">
+          <fieldset>
+            <legend>Create board</legend>
             <div class="form-group">
               <div class="form-control-wrapper">
-                <input type="text" class="form-control empty" name="name" ng-model="name" required>
+                <input type="text" class="form-control empty" name="name" ng-model="name" autofocus="" required>
                 <div class="floating-label">name</div>
                 <span class="material-input"></span>
               </div>
@@ -14,8 +15,8 @@
             <div class="form-group">
               <button class="btn btn-primary btn-block btn-lg">Save</button>
             </div>
-          </form>
-        </div>
+          </fieldset>
+        </form>
       </div>
     </div>
   </div>
