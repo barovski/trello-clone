@@ -34,3 +34,4 @@ reywood:publish-composite
 fortawesome:fontawesome
 angularui:angular-ui-bootstrap
 dburles:collection-helpers
+rgnevashev:meteor-angular-coffee
